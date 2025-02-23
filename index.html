@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Navbar Styling */
+        .navbar {
+            position: fixed; /* Fix navbar at the top */
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem 2rem;
+            background: rgba(226, 111, 4, 0.8);
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .menu {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+        
+        .menu a {
+            color: #ccd6f6;
+            font-size: medium;
+            transition: color 0.3s;
+            text-decoration: none;
+        }
+        
+        .menu a:hover {
+            color: #414141;
+        }
+        
+        .resume-button {
+            margin-left: 16px;
+            padding: 8px 16px;
+            border: 1px solid #64ffda;
+            color: #12d8aa;
+            font-size: medium;
+            transition: background 0.3s, color 0.3s;
+            text-decoration: none;
+            font-weight: bolder;
+        }
+
+        .resume-button:hover {
+            background: #c6cccb;
+            color: #1a1a1b;
+            font-weight: bolder;
+        }
+
+        /* Body and Image Section */
+        body {
+            margin-top: 80px; /* Adjust space for fixed navbar */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 40px 20px 20px; /* Add padding around images */
+        }
+
+        div img {
+            width: 200px;
+            height: 150px;
+            border: 2px solid brown;
+            box-shadow: 4px 7px 7px 0px black;
+            cursor: pointer;
+            transition: 400ms;
+        }
+
+        div img:hover {
+            filter: grayscale(1);
+            transform: scale(1.03);
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: rgb(196, 227, 228);
+            width: 100%;
+            padding: 20px;
+            margin-top: 40px; /* Space above footer */
+            text-align: center;
+            position: relative;
+        }
+
+        footer ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        footer ul li {
+            font-size: 16px;
+            color: #333;
+        }
+
+        footer i {
+            margin: 0 10px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        footer hr {
+            background-color: rgb(204, 20, 20);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .menu {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            div img {
+                width: 150px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Monuments</a></li>
+                <li><a href="#work">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" class="resume-button">Map</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Image Gallery Section -->
+    <div>
+        <img src="https://media.istockphoto.com/id/485899645/photo/taj-mahal-monument-at-sunrise-agra-india.jpg?s=612x612&w=0&k=20&c=zLDGvDZJ0c_m38e630HTNreoiUipOTM8IFuzWHSnPO4=" alt="Taj Mahal">
+        <img src="https://media.istockphoto.com/id/165204592/photo/qutub-minar-delhi-india.jpg?s=612x612&w=0&k=20&c=YvFLPmQmlgCyX7RGZA1VpKctdC6QsChINzLSMDPNI9k=" alt="Qutub Minar">
+        <img src="https://media.istockphoto.com/id/489343716/photo/humayuns-tomb-delhi-india-cngltrv1109.jpg?s=612x612&w=0&k=20&c=iMkNqT3EHq5jYu6QUT5IoHL5-FE_YRqLA9pviP74zkU=" alt="Humayun's Tomb">
+        <img src="https://media.istockphoto.com/id/485899645/photo/taj-mahal-monument-at-sunrise-agra-india.jpg?s=612x612&w=0&k=20&c=zLDGvDZJ0c_m38e630HTNreoiUipOTM8IFuzWHSnPO4=" alt="Taj Mahal">
+        <img src="https://media.istockphoto.com/id/165204592/photo/qutub-minar-delhi-india.jpg?s=612x612&w=0&k=20&c=YvFLPmQmlgCyX7RGZA1VpKctdC6QsChINzLSMDPNI9k=" alt="Qutub Minar">
+        <img src="https://media.istockphoto.com/id/489343716/photo/humayuns-tomb-delhi-india-cngltrv1109.jpg?s=612x612&w=0&k=20&c=iMkNqT3EHq5jYu6QUT5IoHL5-FE_YRqLA9pviP74zkU=" alt="Humayun's Tomb">
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div>
+            <label>Follow us</label>
+            <i class="fa-brands fa-square-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-square-github"></i>
+        </div>
+        <hr>
+        <ul>
+            <li>More about us</li>
+            <li>Contact us</li>
+            <li>Investor relations</li>
+            <li>History</li>
+            <li>Locations</li>
+        </ul>
+    </footer>
+</body>
+</html>
